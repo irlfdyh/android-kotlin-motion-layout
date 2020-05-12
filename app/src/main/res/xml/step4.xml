@@ -24,19 +24,28 @@
             app:constraintSetEnd="@+id/end"
             app:duration="3000">
         <OnClick
-                app:targetId="@id/moon"
-                app:clickAction="toggle"
-        />
+            app:targetId="@id/moon"
+            app:clickAction="toggle" />
 
         <KeyFrameSet>
             <KeyPosition
-                    app:framePosition="50"
-                    app:motionTarget="@id/moon"
-                    app:keyPositionType="parentRelative"
-                    app:percentY="0.5"
-            />
-            <!-- TODO: Add two more KeyPositions to the KeyFrameSet here -->
-
+                app:framePosition="25"
+                app:motionTarget="@id/moon"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                app:percentX="0.1"/>
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@id/moon"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.5"
+                app:percentX="0.3"/>
+            <KeyPosition
+                app:framePosition="75"
+                app:motionTarget="@id/moon"
+                app:keyPositionType="parentRelative"
+                app:percentY="0.6"
+                app:percentX="0.1"/>
         </KeyFrameSet>
     </Transition>
 
@@ -44,12 +53,10 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@id/moon"
-            
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-        />
+            app:layout_constraintBottom_toBottomOf="parent" />
         <Constraint
             android:id="@id/credits"
             android:layout_width="wrap_content"
@@ -58,8 +65,7 @@
             android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/moon"
-            app:layout_constraintTop_toTopOf="@id/moon"
-            />
+            app:layout_constraintTop_toTopOf="@id/moon" />
     </ConstraintSet>
 
     <!-- Constraints to apply at the end of the animation -->
@@ -69,17 +75,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-        />
+            app:layout_constraintBottom_toBottomOf="parent" />
         <Constraint
-                android:id="@id/credits"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="1.0"
-                android:layout_marginStart="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/moon"
-                app:layout_constraintTop_toTopOf="@id/moon"
-        />
+            android:id="@id/credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1.0"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/moon"
+            app:layout_constraintTop_toTopOf="@id/moon" />
     </ConstraintSet>
 </MotionScene>
